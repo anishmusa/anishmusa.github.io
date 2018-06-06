@@ -1,0 +1,155 @@
+@@ -0,0 +1,154 @@
+<html>
+<head>
+    <title>Timeline demo</title>
+
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://drive.google.com/uc?export=download&id=1h0CIrVikSEal2wUFO96KF_cN0HGIslLK"></script>
+    <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=download&id=1t1xM-DbGXQfItjoM_dRBKr4mnM7bVMLk">
+<style type="text/css">
+        body {font: 10pt arial;}
+		
+div.life-event {
+    background-color:#00FF7F;
+   
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.life-event {
+			background-color:#00FF7F;
+        }
+		
+.tooltip {
+    position: initial;
+    color: blue;
+}
+.toolage{
+    border-radius: 50%;
+    background-color: greenyellow;
+    width: 20px;
+    font-weight: bold;
+	}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px ;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+	top: -100%;
+	left:0;
+	
+    
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+		
+    </style>
+	
+	
+	
+	
+    <script type="text/javascript">
+        google.load("visualization", "1");
+
+        var urlSpreadsheet = "https://docs.google.com/spreadsheets/d/1RphSXan99FvtHMCRQO-O6jET_POERYuk3zCd-CLP16c/edit?usp=sharing";
+        var urlData = "data.php";
+
+        var initialized = true;
+        var query;
+        var vis;
+        var url1 = window.location.href;
+
+       var id = url1.substring(url1.lastIndexOf('#') + 1);
+	  
+        // Set callback to run when API is loaded
+        google.setOnLoadCallback(initialize);
+
+        function initialize() {
+            initialized = true;
+        }
+
+        function load(url) {
+            if (!initialized) {
+                alert("One moment please... still busy loading Google Visualization API");
+                return;
+            }
+
+                dataSourceUrl = "https://docs.google.com/spreadsheets/d/"+id+"/edit?usp=sharing";
+            
+            
+
+            // if the entered url is a google spreadsheet url, replace the part
+            // "/ccc?" with "/tq?" in order to retrieve a neat data query result
+            if (dataSourceUrl.indexOf("/ccc?")) {
+                dataSourceUrl.replace("/ccc?", "/tq?");
+            }
+
+            var handleQueryResponse = function(response) {
+                if (response.isError()) {
+                    alert('Error in query: ' + response.getMessage() + ', ' + response.getDetailedMessage());
+                    return;
+                }
+
+                // retrieve the data from the query response
+                var data = response.getDataTable();
+                document.write(data);
+
+                // specify options
+                var options = {
+                    width:  "100%",
+                    height: "550px",
+                    editable: true,
+                    layout: "box",
+					showNavigation: false
+                };
+
+                // Instantiate our timeline object.
+                vis = new links.Timeline(document.getElementById('mytimeline'), options);
+
+                // Draw our timeline with the created data and options
+                vis.draw(data);
+            }
+
+            query && query.abort();
+            query = new google.visualization.Query(dataSourceUrl);
+            query.send(handleQueryResponse);
+        }
+    function onselect() {
+            var sel = timeline.getSelection();
+            if (sel.length) {
+                if (sel[0].row != undefined) {
+                    var row = sel[0].row;
+                    alert("event " + row + " selected");
+                }
+            }
+        }
+        function loadDataHtml() {
+            document.getElementById("dataSourceUrl").value = urlData;
+            load(urlData);
+        }
+
+        function loadSpreadSheet() {
+            document.getElementById("dataSourceUrl").value = urlSpreadsheet;
+            load(urlSpreadsheet);
+        }
+    </script>
+</head>
+
+<body>
+
+<p>Welcome to UltraWellness
+   
+    <input type="button" value="Get Timeline" onclick="load();">
+</p>
+
+<div id="mytimeline"></div>
+
+</body>
+</html>
