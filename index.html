@@ -3,11 +3,30 @@
 <head>
     <title>Timeline demo</title>
 
+   
+
+	<html>
+<head>
+    <title>Timeline demo</title>
+    <!-- I had copied code from google jsapi and created new file. Because it shows unsafe on browser<script type="text/javascript" src="http://www.google.com/jsapi"></script> -->
+
     <script type="text/javascript" src="https://anishmusa.github.io/google.js"></script>
     <script type="text/javascript" src="https://anishmusa.github.io/timeline.js"></script>
     <link rel="stylesheet" type="text/css" href="https://anishmusa.github.io/timeline.css">
 <style type="text/css">
         body {font: 10pt arial;}
+
+
+div.precriptionid {
+    background-color:#White;
+   
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.precriptionid {
+			background-color:#00FF7F;
+        }
+
 		
 div.life-event {
     background-color:#00FF7F;
@@ -18,15 +37,30 @@ div.life-event {
 div.timeline-event-line.life-event {
 			background-color:#00FF7F;
         }
+div.OnGo {
+    background-color:#DDA0DD;
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.OnGo {
+			background-color:#00FF7F;
+        }
 		
+.patient{
+    position: fixed;
+    top: 45px;
+    font-size: 20px;
+    left: 12px;
+	text-align: left;
+}		
 .tooltip {
     position: initial;
     color: blue;
 }
 .toolage{
-    border-radius: 50%;
+    padding-left:5px;
+	padding-right:5px;
     background-color: greenyellow;
-    width: 20px;
     font-weight: bold;
 	}
 .tooltip .tooltiptext {
@@ -104,7 +138,8 @@ div.timeline-event-line.life-event {
                 // specify options
                 var options = {
                     width:  "100%",
-                    height: "550px",
+                    height: "700px",
+					minHeight: 50,
                     editable: true,
                     layout: "box",
 					showNavigation: false
