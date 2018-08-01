@@ -3,7 +3,7 @@
 body {font: 10pt arial;}
 
  
-.current-concern .toolage {
+/*.current-concern .toolage {
    
     background-color: greenyellow;
     font-weight: bold;
@@ -13,18 +13,12 @@ body {font: 10pt arial;}
     height: 25px;
 }
 
-
-
-
-
-
-
-
+*/
 
 
 /* css for catagoty class name */
 div.current-concern {
-    background: green;
+   
     font-family: monospace;
     box-shadow: 0 0 10px grey;
 border-top: 60px solid transparent;
