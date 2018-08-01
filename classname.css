@@ -3,18 +3,13 @@
 body {font: 10pt arial;}
 
  
-/*.current-concern .toolage {
-   
-    background-color: greenyellow;
-    font-weight: bold;
+.current-concern .toolage {
+  
     background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/arrows.jpg);
-    background-repeat: no-repeat;
     background-position: right;
-    height: 25px;
-}
-
-*/
-
+    background-repeat: no-repeat;
+    background-size: 40px 20px;
+}  
 
 /* css for catagoty class name */
 div.current-concern {
