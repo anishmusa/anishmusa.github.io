@@ -5,10 +5,11 @@ body {font: 10pt arial;}
  
 .current-concern .toolage {
   
-    background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/arrows.jpg);
+    background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/arrows.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 40px 20px;
+    text-align: left;
 }  
 
 /* css for catagoty class name */
@@ -16,7 +17,8 @@ div.current-concern {
    
     font-family: monospace;
     box-shadow: 0 0 10px grey;
-	
+background: whitesmoke;
+    border: none;
 	
 }
 div.timeline-event-line.current-concern {
