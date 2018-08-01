@@ -1,0 +1,84 @@
+<style type="text/css">
+        body {font: 10pt arial;}
+
+
+div.current-concern {
+    background: turquoise;
+   
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.current-concern {
+			background-color:#00FF7F;
+        }
+	
+	
+	div.precriptionid {
+    background-color:#White;
+   
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.precriptionid {
+			background-color:#00FF7F;
+        }
+
+		
+div.life-event {
+	
+    background-color:#00FF7F;
+   
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.life-event {
+			background-color:#00FF7F;
+        }
+div.OnGo {
+    background-color:#DDA0DD;
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.OnGo {
+			background-color:#00FF7F;
+        }
+		
+.patient{
+    position: fixed;
+    top: 45px;
+    font-size: 20px;
+    left: 12px;
+	text-align: left;
+}		
+.tooltip {
+    position: initial;
+    color: blue;
+}
+.toolage{
+    padding-left:5px;
+	padding-right:5px;
+    background-color: greenyellow;
+    font-weight: bold;
+	}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px ;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+	top: -100%;
+	left:0;
+	
+    
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+		
+    </style>
