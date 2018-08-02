@@ -2,7 +2,32 @@
 
 body {font: 10pt arial;}
 
- 
+ div.sign-symptom{
+    background-color:#ffb3b3;
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.sign-symptom{
+background-color:#00FF7F;
+}
+.sign-symptom .toolage {
+    background-color: #ff1a1a; 
+    color: white;      
+    }
+
+div.diagnostic-test{
+    background-color:#00b33c;
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+}
+div.timeline-event-line.diagnostic-test{
+   background-color:##00b33c;
+        }
+.diagnostic-test .toolage {
+    background-color: #00802b; 
+    color: white;   
+    }
+
 .current-concern .toolage {
   
     background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/arrows.png);
