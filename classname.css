@@ -2,7 +2,26 @@
 
 body {font: 10pt arial;}
 
- div.sign-symptom{
+/* css for catagoty class name start */
+div.surgery {
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+    background: whitesmoke;
+    border: none;	
+}
+div.timeline-event-line.surgery {
+    background-color:#00FF7F;
+        }
+.surgery .toolage {
+    background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/arrows.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 40px 20px;
+    text-align: left;
+}  	
+/* css for catagoty class name end */ 
+
+div.sign-symptom{
     background-color:#ffb3b3;
     font-family: monospace;
     box-shadow: 0 0 10px grey;
@@ -28,29 +47,26 @@ div.timeline-event-line.diagnostic-test{
     color: white;   
     }
 
+
+
+/* css for catagoty class name start */
+div.current-concern {
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+    background: whitesmoke;
+    border: none;	
+}
+div.timeline-event-line.current-concern {
+    background-color:#00FF7F;
+        }
 .current-concern .toolage {
-  
     background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/arrows.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 40px 20px;
     text-align: left;
-}  
-
-/* css for catagoty class name */
-div.current-concern {
-   
-    font-family: monospace;
-    box-shadow: 0 0 10px grey;
-background: whitesmoke;
-    border: none;
-	
-}
-div.timeline-event-line.current-concern {
-background-color:#00FF7F;
-        }
-	
-
+}  	
+/* css for catagoty class name end */
 div.precriptionid {
     background-color:#White;
     font-family: monospace;
