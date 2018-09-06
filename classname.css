@@ -3,16 +3,16 @@
 body {font: 10pt arial;}
 
 /* css for catagoty class name-Start start */
-div.surgery {
+div.start {
     font-family: monospace;
     box-shadow: 0 0 10px grey;
     background: tomato;
     border: none;	
 }
-div.timeline-event-line.surgery {
+div.timeline-event-line.start {
     background-color:#00FF7F;
         }
-.surgery .toolage {
+.start .toolage {
     background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/start.gif);
     background-position: right;
     background-repeat: no-repeat;
