@@ -2,6 +2,27 @@
 
 body {font: 10pt arial;}
 
+/* css for catagoty class name-Start start */
+div.surgery {
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+    background: tomato;
+    border: none;	
+}
+div.timeline-event-line.surgery {
+    background-color:#00FF7F;
+        }
+.surgery .toolage {
+    background-image: url(https://raw.githubusercontent.com/anishmusa/anishmusa.github.io/master/start.gif);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 40px 20px;
+    text-align: left;
+}  	
+/* css for catagoty class name end */ 
+
+
+
 /* css for catagoty class name start */
 div.surgery {
     font-family: monospace;
