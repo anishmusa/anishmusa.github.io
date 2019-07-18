@@ -23,7 +23,24 @@ div.timeline-event-line.start {
 }  	
 /* css for catagoty class name end */ 
 
-
+/* css for catagoty class hospitalization name start */
+div.hospitalization {
+    font-family: monospace;
+    box-shadow: 0 0 10px grey;
+    background: palegreen;
+    border: none;	
+}
+div.timeline-event-line.hospitalization {
+    background-color:#00FF7F;
+        }
+.hospitalization .toolage {
+   
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 40px 20px;
+    text-align: left;
+}  	
+/* css for catagoty class name end */ 
 
 /* css for catagoty class name start */
 div.surgery {
